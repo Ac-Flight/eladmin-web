@@ -103,10 +103,9 @@
     </div>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="财产名称" />
-      <el-table-column prop="nums" label="财产数量" />
-      <el-table-column prop="price" label="财产价值" />
-      <el-table-column prop="configRules" label="财产描述" />
+      <el-table-column prop="configName" label="审批单名称" />
+      <el-table-column prop="nums" label="内容" />
+      <el-table-column prop="price" label="登记人" />
       <el-table-column prop="isActive" label="当前状态" />
       <el-table-column prop="addTime" label="登记日期" />
       <el-table-column>
@@ -160,7 +159,7 @@
 
 <script>
 export default {
-  name: 'PropertyDataLedgerManagement',
+  name: 'ApprovalForm',
   data() {
     return {
       queryModel: {
@@ -174,26 +173,23 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: 'xxx航天器材',
-            configRules: 'xxx航天器材',
-            nums: 100,
-            price: 100000,
+            configName: 'xxx审批单',
+            nums: 'xxx部门周计划任务审批单',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: 'xxx飞行器',
-            configRules: 'xxx飞行器',
-            nums: 100,
-            price: 100000,
+            configName: 'xxx审批单',
+            nums: 'xxx部门周计划任务审批单',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '办公室器材',
-            configRules: '办公室器材',
-            nums: 100,
-            price: 100000,
+            configName: 'xxx审批单',
+            nums: 'xxx部门周计划任务审批单',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           }

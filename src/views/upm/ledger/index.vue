@@ -104,9 +104,8 @@
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
       <el-table-column prop="configName" label="台账名称" />
-      <el-table-column prop="nums" label="数量" />
-      <el-table-column prop="price" label="财产价值" />
-      <el-table-column prop="configRules" label="财产描述" />
+      <el-table-column prop="nums" label="登记内容" />
+      <el-table-column prop="price" label="登记人" />
       <el-table-column prop="isActive" label="当前状态" />
       <el-table-column prop="addTime" label="登记日期" />
       <el-table-column>
@@ -140,7 +139,6 @@
               type="danger"
               icon="el-icon-delete"
               size="mini"
-              @click="toDelete"
             />
           </el-popover>
         </template>
@@ -175,26 +173,23 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: 'xxx航天器材',
-            configRules: 'xxx航天器材',
-            nums: 100,
-            price: 100000,
+            configName: 'xxx航天器材登记信息',
+            nums: 'xxx航天器材',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: 'xxx飞行器',
-            configRules: 'xxx飞行器',
-            nums: 100,
-            price: 100000,
+            configName: 'xxx飞行器登记信息',
+            nums: 'xxx飞行器',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '办公室器材',
-            configRules: '办公室器材',
-            nums: 100,
-            price: 100000,
+            configName: '办公室器材登记信息',
+            nums: '办公室器材',
+            price: 'xxx',
             isActive: '已登记',
             addTime: '2021-09-27 14:16:00'
           }
