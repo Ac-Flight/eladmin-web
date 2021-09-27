@@ -103,9 +103,9 @@
     </div>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="自制件编号" />
-      <el-table-column prop="configRules" label="自制件名称" />
-      <el-table-column prop="isActive" label="所属车间" />
+      <el-table-column prop="configName" label="无本器材编号" />
+      <el-table-column prop="configRules" label="无本器材名称" />
+      <el-table-column prop="isActive" label="数量" />
       <el-table-column prop="addTime" label="备注" />
       <el-table-column>
         <template slot-scope="props">
@@ -160,7 +160,7 @@
 <script>
 
 export default {
-  name: 'HomemadeData',
+  name: 'WithoutEquipment',
   data() {
     return {
       queryModel: {
@@ -174,22 +174,22 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: '00001',
-            configRules: '自制件一',
-            isActive: '第一车间',
-            addTime: '好！'
+            configName: '0001',
+            configRules: 'A无本器材',
+            isActive: '20',
+            addTime: '无'
           },
           {
             configName: '0002',
-            configRules: '自制件二',
-            isActive: '第二车间',
-            addTime: '也好！'
+            configRules: 'B无本器材',
+            isActive: '58',
+            addTime: '无'
           },
           {
             configName: '0003',
-            configRules: '自制件三',
-            isActive: '第三车间',
-            addTime: '非常好！'
+            configRules: 'C无本器材',
+            isActive: '2',
+            addTime: '快没了'
           }
         ]
       },

@@ -66,7 +66,7 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['设备A', '设备B', '设备C', '设备D', '设备E', '设备F', '设备G'],
+          data: ['缺件A', '缺件B', '缺件C', '缺件D', '缺件E', '缺件F', '缺件G'],
           axisTick: {
             alignWithLabel: true
           }
