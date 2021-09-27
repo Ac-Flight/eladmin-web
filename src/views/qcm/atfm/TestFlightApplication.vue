@@ -9,6 +9,8 @@
           <el-form-item>
             <el-button class="filter-item" size="mini" type="success" icon="el-icon-search" @click="toQuery">搜索
             </el-button>
+            <el-button class="filter-item" size="mini" type="success" icon="el-icon-search" @click="toQuery">申请
+            </el-button>
             <el-button
               class="filter-item"
               size="mini"
@@ -60,40 +62,40 @@
         <el-table-column prop="name" label="申请人" />
         <el-table-column prop="status" label="申请状态" />
         <el-table-column label="操作">
-          <template slot-scope="props">
-            <el-button
-              size="mini"
-              type="primary"
-              :disabled="props.row['status'] !== '待审批'"
-            >
-              {{ '撤销申请' }}
-            </el-button>
-          </template>
+          <!--          <template slot-scope="props">-->
+          <!--            <el-button-->
+          <!--              size="mini"-->
+          <!--              type="primary"-->
+          <!--              :disabled="props.row['status'] !== '待审批'"-->
+          <!--            >-->
+          <!--              {{ '撤销申请' }}-->
+          <!--            </el-button>-->
+          <!--          </template>-->
         </el-table-column>
       </el-table>
     </el-dialog>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="计划任务名称" />
+      <el-table-column prop="configName" label="申请名称" />
       <el-table-column prop="isActive" label="当前状态" />
-      <el-table-column width="300">
-        <template slot-scope="props">
-          <el-button
-            size="mini"
-            type="primary"
-            :disabled="!props.row['approveAble']"
-            @click="toEdit(props.row)"
-          >
-            {{ !props.row['approveAble'] ? '暂不可申请' : '可申请' }}
-          </el-button>
-          <el-button
-            v-if="props.row['hasApprove']"
-            size="mini"
-            @click="look(props.row)"
-          >查看我的申请
-          </el-button>
-        </template>
-      </el-table-column>
+      <!--      <el-table-column width="300">-->
+      <!--        <template slot-scope="props">-->
+      <!--          <el-button-->
+      <!--            size="mini"-->
+      <!--            type="primary"-->
+      <!--            :disabled="!props.row['approveAble']"-->
+      <!--            @click="toEdit(props.row)"-->
+      <!--          >-->
+      <!--            {{ !props.row['approveAble'] ? '暂不可申请' : '可申请' }}-->
+      <!--          </el-button>-->
+      <!--          <el-button-->
+      <!--            v-if="props.row['hasApprove']"-->
+      <!--            size="mini"-->
+      <!--            @click="look(props.row)"-->
+      <!--          >查看我的申请-->
+      <!--          </el-button>-->
+      <!--        </template>-->
+      <!--      </el-table-column>-->
     </el-table>
     <!--分页组件-->
     <el-pagination
@@ -110,7 +112,7 @@
 
 <script>
 export default {
-  name: 'CardApplication',
+  name: 'TestFlightApplication',
   data() {
     return {
       queryModel: {
@@ -124,20 +126,44 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: '有寿机件控制卡申请',
+            configName: '飞机A因xxx进行试飞',
             addUser: 'xxx',
-            isActive: '不可申请',
+            isActive: '待审核',
+            addTime: '2021-09-27 14:16:00',
+            hasApprove: false,
+            approveAble: false
+          },
+          {
+            configName: '飞机B因xxx进行试飞',
+            addUser: 'xxx',
+            isActive: '待审核',
+            addTime: '2021-09-27 14:16:00',
+            hasApprove: true,
+            approveAble: false
+          },
+          {
+            configName: '飞机C因xxx进行试飞',
+            addUser: 'xxx',
+            isActive: '已通过',
+            addTime: '2021-09-27 14:16:00',
+            hasApprove: true,
+            approveAble: false
+          },
+          {
+            configName: '飞机D因xxx进行试飞',
+            addUser: 'xxx',
+            isActive: '待审核',
             addTime: '2021-09-27 14:16:00',
             hasApprove: false,
             approveAble: true
           },
           {
-            configName: '技术通报落实指令卡申请',
+            configName: '飞机E因xxx进行试飞',
             addUser: 'xxx',
-            isActive: '已申请',
+            isActive: '已通过',
             addTime: '2021-09-27 14:16:00',
             hasApprove: false,
-            approveAble: true
+            approveAble: false
           }
         ]
       },

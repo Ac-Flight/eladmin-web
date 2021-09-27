@@ -103,10 +103,10 @@
     </div>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="控制卡id" />
+      <el-table-column prop="configName" label="飞机" />
       <el-table-column prop="isActive" label="当前状态" />
-      <el-table-column prop="addUser" label="添加人" />
-      <el-table-column prop="addTime" label="添加时间" />
+      <el-table-column prop="addUser" label="操作人" />
+      <el-table-column prop="addTime" label="出库时间" />
       <el-table-column>
         <template slot-scope="props">
           <el-button
@@ -158,7 +158,7 @@
 
 <script>
 export default {
-  name: 'ControlCardManagement',
+  name: 'TestFlightInformation',
   data() {
     return {
       queryModel: {
@@ -172,33 +172,33 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: '卡A',
+            configName: '飞机A',
             addUser: 'xxx',
-            isActive: '已激活',
+            isActive: '待审核',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '卡B',
+            configName: '飞机B',
             addUser: 'xxx',
-            isActive: '已激活',
+            isActive: '待审核',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '卡C',
+            configName: '飞机C',
             addUser: 'xxx',
-            isActive: '可申请',
+            isActive: '待审核',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '卡D',
+            configName: '飞机D',
             addUser: 'xxx',
-            isActive: '已激活',
+            isActive: '已完成',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '卡E',
+            configName: '飞机E',
             addUser: 'xxx',
-            isActive: '已激活',
+            isActive: '已完成',
             addTime: '2021-09-27 14:16:00'
           }
         ]

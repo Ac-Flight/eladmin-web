@@ -120,7 +120,7 @@
 
 <script>
 export default {
-  name: 'HandoverAudit',
+  name: 'TestFlightApproval',
   data() {
     return {
       queryModel: {
@@ -134,49 +134,49 @@ export default {
       tableModel: {
         tableData: [
           {
-            type: '飞机A因xxx进行交接',
+            type: '飞机A因xxx进行试飞',
             time: '2021-09-26 10:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '待审批'
           },
           {
-            type: '飞机B因xxx进行交接',
+            type: '飞机B因xxx进行试飞',
             time: '2021-08-26 09:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '已完结'
           },
           {
-            type: '飞机C因xxx进行交接',
+            type: '飞机C因xxx进行试飞',
             time: '2021-09-26 10:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '待审批'
           },
           {
-            type: '飞机D因xxx进行交接',
+            type: '飞机D因xxx进行试飞',
             time: '2021-08-26 09:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '已归档'
           },
           {
-            type: '飞机D因xxx进行交接',
+            type: '飞机D因xxx进行试飞',
             time: '2021-07-26 09:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '已归档'
           },
           {
-            type: '飞机D因xxx进行交接',
+            type: '飞机D因xxx进行试飞',
             time: '2021-06-26 09:00:00',
             reason: 'xxxx',
             name: 'xxx',
             status: '已归档'
           },
           {
-            type: '飞机D因xxx进行交接',
+            type: '飞机D因xxx进行试飞',
             time: '2021-05-26 09:00:00',
             reason: 'xxxx',
             name: 'xxx',
