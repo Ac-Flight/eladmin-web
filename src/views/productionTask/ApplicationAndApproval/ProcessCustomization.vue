@@ -103,45 +103,33 @@
     </div>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="财产名称" />
-      <el-table-column prop="nums" label="财产数量" />
-      <el-table-column prop="price" label="财产价值" />
-      <el-table-column prop="configRules" label="财产描述" />
+      <el-table-column prop="configName" label="计划任务名称" />
       <el-table-column prop="isActive" label="当前状态" />
-      <el-table-column prop="addTime" label="登记日期" />
-      <el-table-column>
-        <template slot-scope="props">
+      <el-table-column prop="addUser" label="添加人" />
+      <el-table-column prop="addTime" label="添加时间" />
+      <el-table-column width="450">
+        <template slot-scope="">
           <el-button
             size="mini"
             type="primary"
             icon="el-icon-edit"
-            @click="toEdit(props.row)"
-          />
-          <el-popover
-            v-model="pop"
-            placement="top"
-            width="180"
-            trigger="manual"
-            @show="onPopoverShow"
-            @hide="onPopoverHide"
           >
-            <p>{{ msg }}</p>
-            <div style="text-align: right; margin: 0">
-              <el-button size="mini" type="text" @click="doCancel">取消</el-button>
-              <el-button
-                type="primary"
-                size="mini"
-                @click="doDelete(props.row)"
-              >确定
-              </el-button>
-            </div>
-            <el-button
-              slot="reference"
-              type="danger"
-              icon="el-icon-delete"
-              size="mini"
-            />
-          </el-popover>
+            查看流程图
+          </el-button>
+          <el-button
+            size="mini"
+            type="primary"
+            icon="el-icon-edit"
+          >
+            部署流程
+          </el-button>
+          <el-button
+            size="mini"
+            type="primary"
+            icon="el-icon-edit"
+          >
+            编辑流程
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -160,7 +148,7 @@
 
 <script>
 export default {
-  name: 'PropertyDataLedgerManagement',
+  name: 'ProcessCustomization',
   data() {
     return {
       queryModel: {
@@ -174,27 +162,33 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: 'xxx航天器材',
-            configRules: 'xxx航天器材',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: '厂年度计划任务',
+            addUser: 'xxx',
+            isActive: '不可申请',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: 'xxx飞行器',
-            configRules: 'xxx飞行器',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: '厂月度计划任务',
+            addUser: 'xxx',
+            isActive: '可申请',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '办公室器材',
-            configRules: '办公室器材',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: '部门周计划任务',
+            addUser: 'xxx',
+            isActive: '可申请',
+            addTime: '2021-09-27 14:16:00'
+          },
+          {
+            configName: '部门月度计划任务',
+            addUser: 'xxx',
+            isActive: '可申请',
+            addTime: '2021-09-27 14:16:00'
+          },
+          {
+            configName: '部门年度计划任务',
+            addUser: 'xxx',
+            isActive: '不可申请',
             addTime: '2021-09-27 14:16:00'
           }
         ]

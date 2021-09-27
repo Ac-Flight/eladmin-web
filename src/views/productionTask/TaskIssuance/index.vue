@@ -103,12 +103,11 @@
     </div>
     <el-table :data="tableModel.tableData" style="width: 100%;">
       <el-table-column align="center" type="selection" width="55" />
-      <el-table-column prop="configName" label="财产名称" />
-      <el-table-column prop="nums" label="财产数量" />
-      <el-table-column prop="price" label="财产价值" />
-      <el-table-column prop="configRules" label="财产描述" />
+      <el-table-column prop="configName" label="任务名称" />
+      <el-table-column prop="nums" label="执行车间" />
       <el-table-column prop="isActive" label="当前状态" />
-      <el-table-column prop="addTime" label="登记日期" />
+      <el-table-column prop="addTime" label="下发日期" />
+      <el-table-column prop="price" label="备注" />
       <el-table-column>
         <template slot-scope="props">
           <el-button
@@ -160,7 +159,7 @@
 
 <script>
 export default {
-  name: 'PropertyDataLedgerManagement',
+  name: 'TaskIssuance',
   data() {
     return {
       queryModel: {
@@ -174,28 +173,39 @@ export default {
       tableModel: {
         tableData: [
           {
-            configName: 'xxx航天器材',
-            configRules: 'xxx航天器材',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: 'xxx车间周计划任务',
+            nums: 'xxx车间',
+            price: 'xxx',
+            isActive: '已下发',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: 'xxx飞行器',
-            configRules: 'xxx飞行器',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: 'xxx车间周计划任务',
+            nums: 'xxx车间',
+            price: 'xxx',
+            isActive: '已接收',
             addTime: '2021-09-27 14:16:00'
           },
           {
-            configName: '办公室器材',
-            configRules: '办公室器材',
-            nums: 100,
-            price: 100000,
-            isActive: '已登记',
+            configName: 'xxx车间周计划任务',
+            nums: 'xxx车间',
+            price: 'xxx',
+            isActive: '正在执行',
             addTime: '2021-09-27 14:16:00'
+          },
+          {
+            configName: 'xxx车间周计划任务',
+            nums: 'xxx车间',
+            price: 'xxx',
+            isActive: '正在执行',
+            addTime: '2021-09-27 14:16:00'
+          },
+          {
+            configName: 'xxx车间周计划任务',
+            nums: 'xxx车间',
+            price: 'xxx',
+            isActive: '已完成',
+            addTime: '2021-09-14 14:16:00'
           }
         ]
       },
