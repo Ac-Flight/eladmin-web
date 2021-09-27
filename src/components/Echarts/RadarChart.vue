@@ -72,18 +72,18 @@ export default {
             }
           },
           indicator: [
-            { name: 'Sales', max: 10000 },
-            { name: 'Administration', max: 20000 },
-            { name: 'Information Techology', max: 20000 },
-            { name: 'Customer Support', max: 20000 },
-            { name: 'Development', max: 20000 },
-            { name: 'Marketing', max: 20000 }
+            { name: '续本、续页申请', max: 10000 },
+            { name: '串件申请', max: 20000 },
+            { name: '缓建申请', max: 20000 },
+            { name: '补本申请', max: 20000 },
+            { name: '缺件申请', max: 20000 },
+            { name: '修件申请', max: 20000 }
           ]
         },
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['Allocated Budget', 'Expected Spending', 'Actual Spending']
+          data: ['车间A', '车间B', '车间C']
         },
         series: [{
           type: 'radar',
@@ -100,15 +100,15 @@ export default {
           data: [
             {
               value: [5000, 7000, 12000, 11000, 15000, 14000],
-              name: 'Allocated Budget'
+              name: '车间A'
             },
             {
               value: [4000, 9000, 15000, 15000, 13000, 11000],
-              name: 'Expected Spending'
+              name: '车间B'
             },
             {
               value: [5500, 11000, 12000, 15000, 12000, 12000],
-              name: 'Actual Spending'
+              name: '车间C'
             }
           ],
           animationDuration: animationDuration
